@@ -3,86 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Servicios Médicos La Fe</title>
     <link rel="stylesheet" href="css/stylemain.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="Contenedor-Menu-Arriba">
-            <img src="Imagenes/Logo servicios medicos la fe PNG.png" alt="Logo de Servicios Médicos La Fe" style="height: 65px; vertical-align: middle;" href="main.html">
-            <div class="registro-header">
-                <span>Obtenga más beneficios:</span>
-                <a href="Registrarse.html">Regístrese</a>
-                <span class="separador">|</span>
-                <a href="InicioSesion.html">Iniciar sesión</a>
-            </div>        
-        </div>    
-        <nav>
-            <div class="logo">
-                <h1>Servicios Médicos La Fe</h1>
-            </div>
-            <div class="menu">
+    <header class="header">
+        <div class="top-bar">
+            <a href="Registrarse.html">Regístrate</a> |
+            <a href="InicioSesion.html">Inicia sesión</a>
+        </div>
+        <div class="Contenedor-Menu-Principal">
+            <img src="Imagenes/Logo servicios medicos la fe PNG.png" alt="Logo de Servicios Médicos La Fe" class="logo">
+            <nav>
                 <a href="index.html">Inicio</a>
-                <a href="Conozcanos.html">Conozcanos</a>
+                <a href="Conozcanos.html">Conózcanos</a>
                 <a href="InicioSesion.html">Resultados de Laboratorio</a>
                 <a href="Contactar.html">Contacto</a>
-            </div>
-            <div class="burger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <div>
-                <h1>Bienvenidos a Servicios Médicos La Fe</h1>
-                <p>Tu salud, nuestra prioridad</p>
-                <button>Consulta Tus Resultados</button>
-            </div>
-        </section>
-
-        <section class="services">
-            <h2>Nuestros Servicios</h2>
-            <div class="service-container">
-                <div class="service-item">
-                    <div class="service-image">
-                        <img src="Imagenes/index.html/consulta medica seccion.jpeg" alt="Consultas Médicas Icono">
-                    </div>
-                    <h3>Consultas Médicas</h3>
-                    <p>Atención personalizada con profesionales de la salud para cuidar de tu bienestar, con una amplia gama de especialidades y un enfoque integral para tu salud.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-image">
-                        <img src="Imagenes/index.html/Imagen de seccion de laboratorio.jpeg" alt="Laboratorio Icono">
-                    </div>
-                    <h3>Laboratorios</h3>
-                    <p>Realizamos análisis clínicos de alta precisión, con tecnología de punta y resultados rápidos para brindarte la información necesaria para tu salud.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-image">
-                        <img src="Imagenes/index.html/Chequeo medico consulta.jpeg" alt="Chequeos Médicos Icono">
-                    </div>
-                    <h3>Chequeos Médicos</h3>
-                    <p>Chequeos completos y personalizados para un seguimiento integral, permitiéndote conocer tu estado de salud y prevenir cualquier problema a tiempo.</p>
-                </div>
-            </div>
-        </section>
-        <div class="button-whatsapp">
-            <a aria-label="Chat on WhatsApp" href="https://wa.me/50583780772" target="_blank">
-                <img alt="Chat on WhatsApp" src="Imagenes/index.html/whatsapp.png" />
-            </a>
+            </nav>
         </div>
-        
-        
-        
-        
+    </header>
 
-    </main>
-    <script src="JAVASCRIPT/Main.js"></script>
-    </body>
-    </html>
+    <section class="hero">
+        <h1>Bienvenido a Servicios Médicos La Fe</h1>
+        <p>Atención médica con dedicación y calidad</p>
+        <button>Ver Resultados de Laboratorio</button>
+    </section>
+
+    <section class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-container">
+            <div class="service-item">
+                <img src="Imagenes/consulta_medica.jpg" alt="Consultas Médicas">
+                <h3>Consultas Médicas</h3>
+                <p>Atención personalizada para el cuidado de tu salud con especialistas comprometidos.</p>
+            </div>
+            <div class="service-item">
+                <img src="Imagenes/laboratorio.jpg" alt="Laboratorios">
+                <h3>Laboratorios</h3>
+                <p>Equipos modernos y resultados confiables para un diagnóstico preciso.</p>
+            </div>
+            <div class="service-item">
+                <img src="Imagenes/chequeo_medico.jpg" alt="Chequeos Médicos">
+                <h3>Chequeos Médicos</h3>
+                <p>Chequeos integrales para un seguimiento adecuado de tu bienestar.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

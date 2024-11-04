@@ -1,109 +1,70 @@
-/* Estilos globales */
 * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-/* Estilos para que el menú sea fijo al hacer scroll */
-header{
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
-}
-.Contenedor-Menu-Arriba {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #004080; 
+    font-family: 'Roboto', sans-serif;
 }
 
-.logo-img {
-    height: 50px;
-    margin-right: 10px;
+body {
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-.registro-header {
-    display: flex; 
-    align-items: center; 
-    background-color: #004080; 
-    color: white; 
-    font-size: 16px;
+/* Barra superior para inicio de sesión y registro */
+.top-bar {
+    background-color: black; /* Azul oscuro */
+    text-align: right;
+    padding: 5px 15px;
+    font-size: 14px;
 }
 
-.registro-header a {
-    color: #f9f9f9; 
-    font-weight: 700;
-    text-decoration: none; 
-    margin: 0 10px;
-    transition: color 0.3s ease; 
-}
-
-.registro-header a:hover{
-    color: #fdd835;
-}
-
-.registro-header .separador {
-    color: white;
-}
-
-nav {
-    background-color: rgb(239, 145, 47);
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative; /* Inicialmente, posición relativa */
-    width: 100%;
-    transition: all 0.3s ease; /* Transición suave */
-    z-index: 999;
-}
-
-nav.sticky {
-    position: fixed;
-    top: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para darle efecto */
-    width: 100%;
-}
-
-nav h1 {
-    font-size: 24px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    margin-left: 10px;
-}
-
-nav .menu {
-    display: flex;
-}
-
-nav .menu a {
-    color: white;
+.top-bar a {
+    color: #fdd835; /* Amarillo dorado */
     text-decoration: none;
-    margin: 0 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.top-bar a:hover {
+    color: #ffffff; /* Blanco al pasar el cursor */
+}
+
+/* Contenedor principal del encabezado */
+.Contenedor-Menu-Principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #004080; /* Azul oscuro */
+}
+
+/* Logo */
+.logo {
+    height: 60px; /* Tamaño del logo */
+}
+
+/* Estilos de navegación */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff; /* Texto en blanco */
+    text-decoration: none;
     font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-nav .menu a:hover {
-    color: #fdd835;
+nav a:hover {
+    color: #fdd835; /* Amarillo dorado al pasar el cursor */
 }
 
-/* Botón de menú hamburguesa para dispositivos móviles */
-.menu-toggle {
-    display: none;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* Icono de hamburguesa */
+/* Icono de menú hamburguesa para dispositivos móviles */
 .burger-icon {
-    display: none;
+    display: none; /* Oculto en escritorio */
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
@@ -116,95 +77,106 @@ nav .menu a:hover {
     transition: background-color 0.3s ease;
 }
 
-.burger-icon:hover span {
-    background-color: #fdd835; /* Color al pasar el cursor */
-}
-
 /* Menu desplegable en pantallas pequeñas */
 @media (max-width: 768px) {
-    .menu {
+    .Contenedor-Menu-Principal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
         display: none;
         flex-direction: column;
-        align-items: center;
-        background-color: #004080;
         width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.4s ease, padding 0.4s ease;
+        background-color: #004080; /* Azul oscuro */
+        padding: 10px 0;
     }
 
-    .menu.menu-open {
+    nav.menu-open {
         display: flex;
-        max-height: 300px; /* Ajusta según el tamaño del menú */
-        padding: 20px 0;
-    }
-
-    .menu a {
-        color: white;
-        padding: 10px 20px;
-        font-size: 18px;
-        text-decoration: none;
-        width: 100%;
-        text-align: center;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .menu a:hover {
-        background-color: #fdd835;
-        color: #004080;
     }
 
     .burger-icon {
-        display: flex;
-        margin-left: auto;
-        padding: 15px;
+        display: flex; /* Visible en móvil */
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+
+    .burger-icon span:hover {
+        background-color: #fdd835; /* Cambia a amarillo dorado al pasar el cursor */
+    }
+
+    nav a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
     }
 }
 
 .hero {
-    background-image: url('pikaso_edit.jpeg'); /* Reemplaza con una imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+    background: url('pikaso_edit.jpeg') center center/cover no-repeat;
+    background-size: cover; /* Cubre toda el área */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Efecto de parallax */
+    height: 80vh; /* Ocupa el 80% de la altura de la pantalla */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
     padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo negro semitransparente */
+    z-index: 1;
 }
 
 .hero h1 {
     font-size: 48px;
     margin: 0;
+    z-index: 2; /* Asegura que el texto esté sobre la capa semitransparente */
 }
 
 .hero p {
-    font-size: 24px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    z-index: 2;
 }
 
 .hero button {
-    padding: 10px 20px;
-    font-size: 20px;
+    padding: 12px 30px;
+    font-size: 1em;
     background-color: #ffd700;
     border: none;
+    color: white;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 20 px;
     transition: background-color 0.3s ease;
+    border-radius: 5px;
+    z-index: 2;
 }
 
 .hero button:hover {
     background-color: #ffb700;
 }
 
-/* Estilos Responsive */
+/* Estilos responsive para la sección hero */
 @media (max-width: 768px) {
     .hero {
-        height: 60vh;
-        padding: 0 10px;
+        height: 100vh; /* Aumenta la altura para ver más de la imagen */
+        background-size: cover;
+        background-position: center;
+
     }
     
     .hero h1 {
@@ -239,101 +211,75 @@ nav .menu a:hover {
     }
 }
 
-
-/* Sección Servicios */
 .services {
-    background-color: #f5f5f5;
-    padding: 60px 20px;
-    text-align: center;
+    padding: 60px 10%;
+    background-color: #ffffff;
 }
 
 .services h2 {
-    font-size: 40px;
+    font-size: 2.5em;
     color: #004080;
-    margin-bottom: 50px;
-    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .service-container {
     display: flex;
+    gap: 20px;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px;
 }
 
 .service-item {
-    background-color: #ffffff;
-    border-radius: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 350px;
-    max-width: 400px;
     text-align: center;
+    width: 300px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
-.service-image img {
+.service-item img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 200px;
+    object-fit: cover;
 }
 
 .service-item h3 {
-    font-size: 26px;
+    font-size: 1.5em;
     color: #004080;
-    margin: 20px 0 10px;
-    font-family: "Poppins", sans-serif;
+    margin: 15px 0;
 }
 
 .service-item p {
-    font-size: 18px;
-    color: #666666;
-    padding: 0 20px 20px;
-    font-family: "Arial", sans-serif;
+    padding: 0 15px 20px;
+    color: #666;
+    font-size: 1em;
 }
 
-/* Estilos Responsivos */
+.whatsapp-button {
+    background-color: #25d366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #20b954;
+}
+
 @media (max-width: 768px) {
     .service-container {
         flex-direction: column;
         align-items: center;
-    }
-
-    .service-item {
-        max-width: 90%;
-    }
-}
-
-/* Estilos para el botón de WhatsApp */
-.button-whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000; /* Asegura que se muestre sobre otros elementos */
-}
-
-.button-whatsapp a img {
-    width: 60px;
-    height: 60px;
-    transition: transform 0.3s ease;
-    border-radius: 50%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Efecto de hover */
-.button-whatsapp a img:hover {
-    transform: scale(1.1);
-}
-
-/* Estilos responsive para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .button-whatsapp a img {
-        width: 50px;
-        height: 50px;
     }
 }

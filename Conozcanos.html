@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Médicos La Fe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Estilos del menú de navegación */
+        nav {
+            background-color: #004080;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        /* Hero section */
+        .hero {
+            background-image: url('https://www.example.com/clinica.jpg'); /* Reemplaza con una imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 24px;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #ffd700;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .hero button:hover {
+            background-color: #ffb700;
+        }
+
+
+        
+        /* Secciones principales */
+        .services, .about, .contact {
+            padding: 50px;
+            text-align: center;
+        }
+        .services h2, .about h2, .contact h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .services p, .about p, .contact p {
+            font-size: 18px;
+            color: #333;
+        }
+        /* Tarjetas de servicio */
+        .service-card {
+            display: inline-block;
+            width: 30%;
+            margin: 1%;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .service-card h3 {
+            font-size: 24px;
+            color: #004080;
+        }
+        .service-card p {
+            font-size: 16px;
+            color: #555;
+        }
+        /* Sección de contacto */
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact form input, .contact form textarea {
+            width: 60%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact form button:hover {
+            background-color: #ffd700;
+            color: #004080;
+        }
+        /* Pie de página */
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+<nav>
+    <div class="logo">
+        <img src="Imagenes/Logo servicios medicos la fe PNG.png" alt="Logo de Servicios Médicos La Fe" style="height: 50px; vertical-align: middle;">
+        <h1 style="display: inline-block; margin-left: 10px;">Servicios Médicos La Fe</h1>
+    </div>
+    <div class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Expediente Médico</a>
+        <a href="#">Resultados de Laboratorio</a>
+        <a href="#">Contacto</a>
+    </div>
+</nav>
+
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div>
+            <h1>Bienvenidos a Servicios Médicos La Fe</h1>
+            <p>Tu salud, nuestra prioridad</p>
+            <button>Reserva tu cita ahora</button>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-card">
+            <h3>Consultas Médicas</h3>
+            <p>Accede a consultas especializadas con nuestros médicos certificados.</p>
+        </div>
+        <div class="service-card">
+            <h3>Laboratorios</h3>
+            <p>Exámenes clínicos con resultados rápidos y seguros.</p>
+        </div>
+        <div class="service-card">
+            <h3>Expedientes Médicos</h3>
+            <p>Gestión automatizada y segura de tus expedientes médicos.</p>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>Servicios Médicos La Fe es una clínica que combina la atención médica con la última tecnología en gestión de expedientes y resultados de laboratorio, brindando a nuestros pacientes una atención de calidad.</p>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact">
+        <h2>Contacto</h2>
+        <p>Puedes escribirnos para consultas o reservas de citas:</p>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Servicios Médicos La Fe. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

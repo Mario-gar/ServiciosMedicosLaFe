@@ -12,14 +12,23 @@ body {
 
 /* Barra superior para inicio de sesión y registro */
 .top-bar {
-    background-color: black; /* Azul oscuro */
-    text-align: right;
-    padding: 5px 15px;
+    background-color: rgb(239, 145, 47); /* Color dorado */
     font-size: 14px;
+    padding: 12px 100px;  /* Ajusta el padding según sea necesario */
+    text-align: right;  /* Alinea el texto a la derecha */
+    width: 100%;  /* Asegura que ocupe todo el ancho */
+    z-index: 99;  /* Asegura que esté debajo del menú principal */
+    position: relative;  /* Esto asegura que la barra esté en su lugar */
+}
+
+.top-bar span {
+    color: #2b2b2b; /* Amarillo dorado */
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .top-bar a {
-    color: #fdd835; /* Amarillo dorado */
+    color: #2b2b2b; /* Color de los enlaces */
     text-decoration: none;
     margin-left: 10px;
     font-weight: bold;
@@ -30,28 +39,36 @@ body {
     color: #ffffff; /* Blanco al pasar el cursor */
 }
 
-/* Contenedor principal del encabezado */
+/* Contenedor del menú principal */
 .Contenedor-Menu-Principal {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  /* Coloca el logo a la izquierda y los enlaces a la derecha */
     align-items: center;
-    padding: 20px;
-    background-color: #004080; /* Azul oscuro */
+    padding: 12px 100px;  /* Añadir más espacio a los lados */
+    background-color: #0d2b52; /* Azul oscuro */
+    position: -webkit-sticky;  /* Soporte para navegadores WebKit */
+    position: sticky;  /* Hace que el menú se quede pegado cuando se haga scroll */
+    top: 0;  /* Pegado a la parte superior */
+    left: 0;  /* Alinea a la izquierda */
+    width: 100%;  /* Ocupa todo el ancho */
+    z-index: 100;  /* Asegura que el menú esté por encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);  /* Sombra para hacerlo más visible */
 }
 
 /* Logo */
 .logo {
-    height: 60px; /* Tamaño del logo */
+    height: 65px;  /* Ajusta el tamaño del logo */
 }
 
 /* Estilos de navegación */
 nav {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
+/* Enlaces */
 nav a {
-    color: #ffffff; /* Texto en blanco */
+    color: #ffffff;
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
@@ -59,8 +76,15 @@ nav a {
 }
 
 nav a:hover {
-    color: #fdd835; /* Amarillo dorado al pasar el cursor */
+    color: #fdd835;
 }
+
+/* Contenido adicional para poder hacer scroll */
+.contenido {
+    height: 2000px;  /* Esto agrega contenido para hacer scroll */
+    background-color: #f1f1f1;
+}
+
 
 /* Icono de menú hamburguesa para dispositivos móviles */
 .burger-icon {
@@ -114,7 +138,7 @@ nav a:hover {
 }
 
 .hero {
-    background: url('pikaso_edit.jpeg') center center/cover no-repeat;
+    background: url('Confident\ Hispanic\ Female\ Doctor\ in\ Hospital\ Setting.jpeg') center center/cover no-repeat;
     background-size: cover; /* Cubre toda el área */
     background-position: center; /* Centra la imagen */
     background-attachment: fixed; /* Efecto de parallax */
